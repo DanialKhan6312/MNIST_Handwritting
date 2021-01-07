@@ -1,0 +1,76 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template/scrolling-nav)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+header {
+  padding: 156px 0 100px;
+  background-color: #6026de;
+}
+
+section {
+  padding: 150px 0;
+}
+
+#content {
+   width:280px;
+   height:280px;
+   margin: 0 auto;
+   margin-top:5px;
+   border:1px dotted black;
+   background-color: black;
+}
+
+.button {
+ border: none;
+ color: white;
+ padding: 16px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin: 0 auto;
+ margin-top:30px;
+ transition-duration: 0.4s;
+ cursor: pointer;
+}
+
+.buttona {
+ border: none;
+ color: white;
+ padding: 16px 32px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin-left: 850px;
+ margin-top:30px;
+ transition-duration: 0.4s;
+ cursor: pointer;
+}
+
+.button1 {
+ background-color: white;
+ color: black;
+ border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+ background-color: #4CAF50;
+ color: white;
+}
+
+.button2 {
+ background-color: white;
+ color: black;
+ border: 2px solid #FF0000;
+}
+
+.button2:hover {
+ background-color: #FF0000;
+ color: white;
+}
+
+p.about {
+  font-size: 14px;
+}
