@@ -11,10 +11,10 @@
   <title>Gideon 2020</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <link href="{{url_for('static', filename='scrolling-nav.css')}}" rel="stylesheet">
 
 </head>
 
@@ -54,17 +54,22 @@
           <h2>The Project</h2>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p class="lead">Draw a digit (0-9) on the canvas below:</p>
-          <div id="content">
-              <canvas id="myCanvas">
-              </canvas>
-          </div>
-          <a href="#" class="buttona button1">Submit</a>
-      		<a href="#" class="button button2">Clear</a>
+
+
+
+
+
         </div>
       </div>
     </div>
   </section>
+<div id="contenta">
+              <canvas id="myCanvas">
+              </canvas>
 
+          </div>
+  <button class= "buttona button1" onclick="myFunction()">Submit</button>
+      		<a href="/" class="button button2">Clear</a>
   <section id="services" class="bg-light">
     <div class="container">
       <div class="row">
@@ -76,9 +81,15 @@
       <div class="row text-center">
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
-            <p>This person is a third year something student. This person did this, this, this. They etc. etc. etc.</p>
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{{url_for('static', filename='Danial.jpg')}}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Danial Khan</h5><span class="small text-uppercase text-muted">Project Manager</span>
+            <br>
+            <br>
+            <p class="about">
+              Third Year <br>
+              Dual Degree in Mechatronic Systems Engineering and Computer Science <br>
+              <a href="mailto:DanialKhan6312@gmail.com">DanialKhan6312@gmail.com</a> <br>
+            </p>
           </div>
         </div>
         <!-- End-->
@@ -93,7 +104,7 @@
 
         <!-- Team item-->
         <div class="col-xl-3 col-sm-6 mb-5">
-          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="images/hanna_icon.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{{url_for('static', filename='hanna_icon.jpg')}}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h5 class="mb-0">Hanna Dodd</h5><span class="small text-uppercase text-muted">Team Member</span>
             <br>
             <br>
@@ -135,18 +146,18 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{url_for('static', filename=jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename=bootstrap.bundle.min.js')}}"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{{url_for('static', filename='vjquery.easing.min.js')}}"></script>
 
   <!-- Custom JavaScript for this theme -->
-  <script src="js/scrolling-nav.js"></script>
+  <script src="{{url_for('static', filename='scrolling-nav.js') }}"></script>
 
   <!-- Canvas JavaScript -->
-  <script src="js/project.js"></script>
 
+<script src="{{url_for('static', filename='project.js') }}"></script>
 </body>
 
 </html>
