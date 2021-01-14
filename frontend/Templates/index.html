@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Gideon 2020</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static', filename='bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('static', filename='scrolling-nav.css')}}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Navigation</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-white">
+    <div class="container text-center">
+      <h1>MNIST Digit Recognition</h1>
+      <p class="lead">A Western AI Gideon Project</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>The Project</h2>
+          <p class="lead"> This a powered by a convolutional neural network (CNN) deployed through a Flask app. Built as apart of Western AI's
+          Gideon initiative. Feel free to try out the app below.</p>
+          <p class="lead">Draw a digit (0-9) on the canvas below:</p>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+<div id="contenta">
+              <canvas id="myCanvas">
+              </canvas>
+
+          </div>
+  <div id="buttons">
+  <button class= "buttona button1" onclick="myFunction()">Submit</button>
+    <button class= "button button2" onclick="clearbut()">Clear</button>
+    </div>
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>About Us</h2>
+          <p class="lead">We are a team of Western University students that developed this project as a Western AI Gideon team. We spent the semester learning about neural networks and developing our own model that recognizes digits, as shown above.</p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{{url_for('static', filename='Danial.jpg')}}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Danial Khan</h5><span class="small text-uppercase text-muted">Project Manager</span>
+            <br>
+            <br>
+            <p class="about">
+              Third Year <br>
+              Dual Degree in Mechatronic Systems Engineering and Computer Science <br>
+              <a href="mailto:DanialKhan6312@gmail.com">DanialKhan6312@gmail.com</a> <br>
+            </p>
+          </div>
+        </div>
+        <!-- End-->
+
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="../static/ashvin.jpg" alt="" width="100" height="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Ashvin Ananthan</h5><span class="small text-uppercase text-muted">TEAM MEMBER</span>
+            <br>
+            <br>
+            <p class = "about">
+              Third Year <br>
+              Honours Specialization in<br>
+              Interdiciplinary Medical Sciences
+              <a href="mailto:Aananth4@uwo.ca">Aananth4@uwo.ca</a>
+            </p>
+          </div>
+        </div>
+        <!-- End-->
+
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{{url_for('static', filename='hanna_icon.jpg')}}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Hanna Dodd</h5><span class="small text-uppercase text-muted">Team Member</span>
+            <br>
+            <br>
+            <p class="about">
+              Third Year <br>
+              Honours Specialization in Computer Science <br>
+              <a href="mailto:hdodd3@uwo.ca">hdodd3@uwo.ca</a> <br>
+            </p>
+          </div>
+        </div>
+        <!-- End-->
+
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="../static/jim.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Jim Doan</h5><span class="small text-uppercase text-muted">Team member</span>
+            <br>
+            <br>
+            <p class="about">
+              Third Year <br>
+              Electrical Engineering<br>
+              <a href="mailto:bdoan2@uwo.ca">bdoan2@uwo.ca</a> <br>
+            </p>
+          </div>
+        </div>
+        <!-- End-->
+
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-1_s02nlg.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Oliver Ma</h5><span class="small text-uppercase text-muted">Team member</span>
+            <br>
+            <br>
+            <p class="about">
+              Third Year<br>
+              Mechatronic Systems Engineering<br>
+              <a href="mailto:oma3@uwo.ca">oma3@uwo.ca</a> <br>
+            </p>
+          </div>
+        </div>
+        <!-- End-->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="{{url_for('static', filename='jquery.easing.min.js')}}"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="{{url_for('static', filename='scrolling-nav.js') }}"></script>
+
+  <!-- Canvas JavaScript -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="{{url_for('static', filename='projectcode.js') }}"></script>
+</body>
+
+</html>
