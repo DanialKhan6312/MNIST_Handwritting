@@ -35,14 +35,22 @@ def ans():
         print ('written')
         mynet=load_model("Model")
         im=image.load_img(filepath,grayscale = True)
-        im=image.img_to_array(im, data_format="channels_last")
-
-        print (im)
-        im=np.expand_dims(im,axis=0)
+        im=image.img_to_array(im, data_format="channels_first")
+        pixel = im.tolist()
+        for i in range(len(pixel[0])-1):
+            for j in range (len(pixel[0][0])-1):
+                if pixel[0][i][j] <= 200:
+                    pixel[0][i][j] = 0
+                else:
+                    pixel[0][i][j]= 255
+        print(pixel)
+        im = np.array(pixel)
+        #print (im)
+        drawing = image.array_to_img(im,data_format="channels_first")
+        drawing.save(filepath)
+        im=np.expand_dims(im,axis=-1)
         imggen= image.ImageDataGenerator(rescale =1/255)
-        print (im.shape)
         data = imggen.flow(im)
-        print (data)
         pred =mynet.predict(data)
         ans=str((np.argmax(pred, axis=1))[0])
 
