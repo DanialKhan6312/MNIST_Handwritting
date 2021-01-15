@@ -1,13 +1,11 @@
 import os
 import re
-import tensorflow as tf
-from keras.models import Sequential, load_model
+from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
 from PIL import Image, ImageOps
 from io import BytesIO
 import base64
-import json
 from flask import Flask, render_template, request
 
 
@@ -22,7 +20,6 @@ def ans():
         base = os.path.dirname(__file__)
         filepath = os.path.join(base, 'uploads', 'image.jpg')
         raw_data = str(request.form.get('base64')+'=')
-        print (raw_data)
         base64_data = re.sub('^data:image/.+;base64,', '', raw_data)
         byte_data = base64.b64decode(base64_data)
         image_data = BytesIO(byte_data)
@@ -39,17 +36,13 @@ def ans():
         pixel = im.tolist()
         for i in range(len(pixel[0])-1):
             for j in range (len(pixel[0][0])-1):
-                if pixel[0][i][j] <= 200:
+                if pixel[0][i][j] <= 160:
                     pixel[0][i][j] = 0
-                else:
-                    pixel[0][i][j]= 255
-        print(pixel)
         im = np.array(pixel)
-        #print (im)
         drawing = image.array_to_img(im,data_format="channels_first")
         drawing.save(filepath)
         im=np.expand_dims(im,axis=-1)
-        imggen= image.ImageDataGenerator(rescale =1/255)
+        imggen= image.ImageDataGenerator(rescale =1/255,data_format="channels_first")
         data = imggen.flow(im)
         pred =mynet.predict(data)
         ans=str((np.argmax(pred, axis=1))[0])
